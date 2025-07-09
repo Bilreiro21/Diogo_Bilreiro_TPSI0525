@@ -3,26 +3,52 @@
     <head>
         <title>Hello World</title>
         <meta charset="UTF-8"> <!-- charset define a codificação de caracteres -->
+        <style>
+            table {
+                width: 100%; /* Define a largura da tabela */
+                border-collapse: collapse; /* Remove o espaço entre as bordas das células */
+            }
+        </style>
     </head>
     <body>
-
+        <h1>titulo principal so usado uma vez</h1> <!-- h1 é o cabeçalho principal e só pode ser utilizado apenas uma vez por página-->
+        <h2>subtitulo 2</h2>
+        <h3>subtitulo 3</h3>
+        <h4>subtitulo 4</h4>
+        <h5>subtitulo 5</h5>
+        <h6>subtitulo 6</h6>
         <table border="1">
             <tr>
-                <th>nome</th> <!-- th é para cabeçalhos de tabela -->
-                <th>idade</th>
-                <th>profissao</th>
+                <th>Nome</th> <!-- th é para cabeçalhos de tabela -->
+                <th>Idade</th>
+                <th>sexo</th>
 
             </tr>
             <tr>
                 <td>Diogo</td> <!-- td é para dados de tabela -->
                 <td>23</td>
-                <td>Programador</td>
+                <td>mas</td>
             </tr>
             <tr>
                 <td>Joana</td>
                 <td>30</td>
-                <td>Designer</td>
+                <td>
+                    <table border="1">
+                        <tr>
+                            <td>fem</td>
+                        </tr>
+                        <tr>
+                            <td>feminino</td>
+                        </tr>
+
+                    </table>
+                </td>
+                
             </tr>
+            <tr>
+                <td>Maria</td>
+                <td>25</td>
+                <td>fem</td>
         </table>
     </body>
 </html>
