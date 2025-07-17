@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: left;
+    color: rgb(93, 138, 206);
+    font-weight: bold;
+}
+
+ p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+header {
+    background: linear-gradient(to bottom, rgb(93, 138, 206), rgb(174, 220, 220));
+}
+
+footer {
+    background-color: tomato;
+    padding: 2px;
+    background: linear-gradient(to top, rgb(93, 138, 206), rgb(174, 220, 220));
+}
+
+h6 {
+    text-align: right;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+div {
+    display: block;
+    margin: auto;
+    width: 90%;
+    background-color: white;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+body {
+    background-color: rgb(174, 220, 220);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
