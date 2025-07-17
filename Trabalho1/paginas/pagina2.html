@@ -1,32 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Página 2</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <title>Página 2</title>
+  <link rel="stylesheet" href="../Styles/style_pagina2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body class="pagina2">
-    <h1 class="pagina2-title">Tabela com Tabela Habilidades</h1>
 
-    <table>
+  <h1 class="pagina2-title">Tabela com Tabela Habilidades e Outras Competências</h1>
+
+  <div class="tabela-principal">
+
+    <!-- Coluna 1: Habilidades -->
+    <div class="coluna">
+      <b>
+        <i class="fa-solid fa-code"></i>
+        Habilidades
+        <i class="fa-solid fa-code"></i>
+      </b>
+      <br><br>
+      <table class="tabela-habilidades">
         <tr>
-            <td>
-                <b>Habilidades</b><br><br>
-                <table>
-                    <tr>
-                        <td>HTML</td>
-                        <td>CSS</td>
-                    </tr>
-                    <tr>
-                        <td>Java</td>
-                        <td>Python</td>
-                    </tr>
-                </table>
-            </td>
+          <td>
+            <div class="celula-habilidade">
+              <i class="fa-brands fa-html5" style="color: orangered;"></i>
+              <span>HTML</span>
+            </div>
+          </td>
+          <td>
+            <div class="celula-habilidade">
+              <i class="fa-brands fa-css3-alt" style="color: blue;"></i>
+              <span>CSS</span>
+            </div>
+          </td>
         </tr>
-    </table>
+        <tr>
+          <td>
+            <div class="celula-habilidade">
+              <i class="fa-brands fa-java" style="color: #e3b10d;"></i>
+              <span>Java</span>
+            </div>
+          </td>
+          <td>
+            <div class="celula-habilidade">
+              <i class="fa-brands fa-python" style="color: #74C0FC;"></i>
+              <span>Python</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
 
-    <a href="../index.html"> Voltar ao Início</a>
+    <!-- Barra vertical -->
+    <div class="separador-vertical"></div>
+
+    <!-- Coluna 2: Outras Competências -->
+    <div class="coluna">
+      <b>
+        <i class="fa-solid fa-gear"></i>
+        Outras Competências
+        <i class="fa-solid fa-gear"></i>
+      </b>
+      <br><br>
+      <table class="tabela-habilidades">
+        <tr>
+          <td>
+            <div class="celula-habilidade">
+              <i class="fa-solid fa-database" style="color: rgb(55, 55, 194)"></i>
+              <span>SQL</span>
+            </div>
+          </td>
+          <td>
+            <div class="celula-habilidade">
+              <i class="fa-brands fa-git-alt" style="color: orangered;"></i>
+              <span>Git</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="celula-habilidade">
+              <i class="fa-solid fa-terminal"></i>
+              <span>Shell</span>
+            </div>
+          </td>
+          <td>
+            <div class="celula-habilidade">
+              <i class="fa-brands fa-figma"></i>
+              <span>Figma</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <a href="../index.html" class="botao-voltar">
+    <i class="fa-solid fa-arrow-left"></i> Voltar ao Início
+  </a>
+
+  <footer>
+    &copy; 2025 Diogo Bilreiro
+  </footer>
+
 </body>
-</html>
 
+</html>
