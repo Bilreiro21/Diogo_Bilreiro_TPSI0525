@@ -51,7 +51,7 @@ main {
   width: 30%;
   background: white;
   padding: 15px;
-  text-align: center;
+  text-align: left
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   border-radius: 8px;
 }
