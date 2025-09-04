@@ -1,0 +1,74 @@
+:root {
+--grad-start: #0e8ddc;
+--grad-end: #de0e0e;
+}
+
+html, body { 
+    scroll-behavior: smooth; 
+}
+
+/* Navbar compacto ao fazer scroll */
+.navbar { 
+    transition: padding 0.25s ease, 
+    background-color 0.25s ease, 
+    box-shadow 0.25s ease; 
+}
+.navbar.scrolled { padding-top: .35rem !important; 
+    padding-bottom: .35rem !important; 
+    background: #0b0f1aee; 
+    box-shadow: 0 6px 30px rgba(0,0,0,.15); 
+}
+
+/* Intro */
+.intro {
+    background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+    color: #fff;
+    padding: 9rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+.hero::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient( rgba(255,255,255,.18) 2px, transparent 2px );
+    background-size: 18px 18px; opacity: .25; pointer-events: none;
+}
+
+/* Cartões de projeto */
+.project-card { 
+    transition: transform .25s ease, 
+    box-shadow .25s ease; 
+}
+.project-card:hover { 
+    transform: translateY(-6px); 
+    box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,.12); 
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+}
+
+/* Secções */
+section { 
+    padding: 5rem 0; 
+}
+
+/* Badges de competências */
+.skill-badge { 
+    border: 1px solid rgba(181, 38, 38, 0.08); 
+    background: #000000; 
+}
+ 
+/* Rodapé */
+footer { 
+    background: #0b0f1a; 
+    color: #dee2e6; 
+}
+footer a { 
+    color: #adb5bd; 
+    text-decoration: none; 
+}
+footer a:hover { 
+    color: #fff; 
+}

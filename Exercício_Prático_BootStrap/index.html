@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio | Bilreiro</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#top"><i class="bi bi-terminal"></i> Portfólio | Bilreiro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro -->
+  <header id="top" class="intro">
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold mb-3">Olá, sou o <span class="text-warning">Diogo Bilreiro</span>.</h1>
+          <p class="lead mb-4">Aspirante a desenvolvedor de software focado em criar interfaces limpas, acessíveis e responsivas — sem complicar.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="#projetos" class="btn btn-light btn-lg"><i class="bi bi-rocket-takeoff"></i> Ver Projetos</a>
+            <a href="#contacto" class="btn btn-outline-light btn-lg"><i class="bi bi-envelope"></i> Falar comigo</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img class="img-fluid rounded-4 shadow" alt="foto laptop" src="https://picsum.photos/id/276/1920/1920"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SOBRE MIM -->
+  <section id="sobre">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">Sobre mim</h2>
+          <p class="text-secondary">Sou um aspirante programador com interesse em front‑end e back‑end. Gosto de escrever código claro, componentes reutilizáveis e automatizar aquilo que é repetitivo. Este portefólio foi feito com <strong>Bootstrap (CDN)</strong>, sem build tools.</p>
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill skill-badge">HTML</span>
+            <span class="badge rounded-pill skill-badge">CSS / Bootstrap</span>
+            <span class="badge rounded-pill skill-badge">JavaScript</span>
+            <span class="badge rounded-pill skill-badge">Node.js</span>
+            <span class="badge rounded-pill skill-badge">Git / GitHub</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="p-4 rounded-4 border bg-white h-100">
+                <div class="fs-3">⏱️</div>
+                <h6 class="mt-2 mb-1">Performance</h6>
+                <p class="small text-secondary mb-0">Componentes leves e foco na experiência.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 rounded-4 border bg-white h-100">
+                <div class="fs-3">🔒</div>
+                <h6 class="mt-2 mb-1">Boas práticas</h6>
+                <p class="small text-secondary mb-0">Atenção a acessibilidade e semântica.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 rounded-4 border bg-white h-100">
+                <div class="fs-3">🧩</div>
+                <h6 class="mt-2 mb-1">Componentização</h6>
+                <p class="small text-secondary mb-0">UI modular e reutilizável.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 rounded-4 border bg-white h-100">
+                <div class="fs-3">⚙️</div>
+                <h6 class="mt-2 mb-1">Automação</h6>
+                <p class="small text-secondary mb-0">Scripts simples para tarefas diárias.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="bg-light">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between mb-4">
+        <div>
+          <h2 class="fw-bold mb-1">Projetos em destaque</h2>
+          <p class="text-secondary mb-0">Alguns trabalhos e exercícios — simples, objetivos e responsivos.</p>
+        </div>
+        <a href="https://github.com/Bilreiro21" target="_blank" class="link-secondary">Ver GitHub <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Projeto 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100 border-0 shadow-sm">
+            <img class="card-img-top" alt="App Mobile" 
+                 src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">App de Tarefas</h5>
+              <p class="card-text text-secondary">Prototipagem de UI mobile e componentes reativos simples.</p>
+              <div class="d-flex gap-2 mb-3">
+                <span class="badge text-bg-light">UI</span>
+                <span class="badge text-bg-light">Protótipo</span>
+              </div>
+              <a class="btn btn-primary" href="https://github.com/Bilreiro21" target="_blank"><i class="bi bi-github"></i> Código</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100 border-0 shadow-sm">
+            <img class="card-img-top" alt="API" 
+                 src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">API Minimalista</h5>
+              <p class="card-text text-secondary">Rotas básicas e documentação sucinta.</p>
+              <div class="d-flex gap-2 mb-3">
+                <span class="badge text-bg-light">Node</span>
+                <span class="badge text-bg-light">REST</span>
+              </div>
+              <a class="btn btn-primary" href="https://github.com/Bilreiro21" target="_blank"><i class="bi bi-github"></i> Código</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100 border-0 shadow-sm">
+            <img class="card-img-top" alt="Jogo" 
+                 src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">Mini‑Jogo JS</h5>
+              <p class="card-text text-secondary">Eventos de teclado e colisão simples em canvas.</p>
+              <div class="d-flex gap-2 mb-3">
+                <span class="badge text-bg-light">JavaScript</span>
+                <span class="badge text-bg-light">Canvas</span>
+              </div>
+              <a class="btn btn-primary" href="https://github.com/Bilreiro21" target="_blank"><i class="bi bi-github"></i> Código</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">Vamos falar</h2>
+          <p class="text-secondary">Aberto a projetos, colaborações e oportunidades. Prefere email? Envie diretamente pelo botão ao lado.</p>
+          <ul class="list-unstyled small text-secondary mb-4">
+            <li class="mb-2"><i class="bi bi-geo-alt"></i> Lisboa, Portugal</li>
+            <li class="mb-2"><i class="bi bi-envelope"></i> <a href="mailto:diogofranciscobilreiro@gmail.com">diogofranciscobilreiro@gmail.com</a></li>
+          </ul>
+          <div class="d-flex gap-3">
+            <a class="btn btn-outline-dark" href="mailto:diogofranciscobilreiro@gmail.com"><i class="bi bi-send"></i> Enviar email</a>
+            <a class="btn btn-dark" href="https://github.com/Bilreiro21" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 p-md-5 rounded-4 border bg-white shadow-sm">
+            <form onsubmit="event.preventDefault(); alert('Obrigado! Mensagem simulada para demo.');">
+              <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input type="text" class="form-control" placeholder="O seu nome" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="o.seu@email.com" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Mensagem</label>
+                <textarea class="form-control" rows="4" placeholder="Escreva a sua mensagem" required></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit"><i class="bi bi-chat-dots"></i> Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+    <!-- Texto à esquerda -->
+    <div class="small">© 2025 Bilreiro · Todos os direitos reservados</div>
+
+    <!-- Links à direita -->
+    <div class="d-flex gap-3 small">
+      <a href="#top" class="d-inline-flex align-items-center">
+        <i class="bi bi-arrow-up-circle me-1"></i> Topo
+      </a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
