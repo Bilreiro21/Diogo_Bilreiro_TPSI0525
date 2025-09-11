@@ -13,8 +13,8 @@ html, body {
     background-color 0.25s ease, 
     box-shadow 0.25s ease; 
 }
-.navbar.scrolled { padding-top: .35rem !important; 
-    padding-bottom: .35rem !important; 
+.navbar.scrolled { padding-top: .35rem !important;
+    padding-bottom: .35rem !important;
     background: #0b0f1aee; 
     box-shadow: 0 6px 30px rgba(0,0,0,.15); 
 }
@@ -27,7 +27,7 @@ html, body {
     position: relative;
     overflow: hidden;
 }
-.hero::after {
+.intro::after {
     content: "";
     position: absolute; inset: 0;
     background-image: radial-gradient( rgba(255,255,255,.18) 2px, transparent 2px );
