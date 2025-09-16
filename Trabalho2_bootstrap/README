@@ -1,1 +1,40 @@
-Decidi refazer o meu trabalho 2 que era um site de gaming. Alterei o código para apenas utilizar o bootsrap.
+I decided to redo my assignment 2, which was a gaming website. I changed the code to only use Bootstrap.
+
+> ⚙️ The entire layout and design rely solely on **Bootstrap utility classes**.
+
+---
+
+### 💻 Technologies Used
+
+- [Bootstrap 5.3](https://getbootstrap.com/)  
+- [Font Awesome 6](https://fontawesome.com/) for icons  
+- HTML5 (no custom CSS or JS)
+
+---
+
+### ✨ Features
+
+- 📢 **News** — Bootstrap cards with latest headlines  
+- 📝 **Reviews** — game analysis cards with background image on hover  
+- 📊 **Tables** — console specs comparison, upcoming releases, and rankings  
+- 📩 **Contact Form** — clean form with icons and validation  
+- 🌙 **Dark theme** with colored highlights (warning/info)
+
+---
+
+### 📱 Responsive Design
+
+The website is fully **mobile-first**, ensuring a great experience on:
+
+- Smartphones  
+- Tablets  
+- Desktop screens
+
+---
+
+### 📧 Author
+
+Created by **Diogo Bilreiro**
+
+- [LinkedIn](https://www.linkedin.com/in/diogo-bilreiro-623368243/)  
+- [GitHub](https://github.com/Bilreiro21)  

@@ -2,64 +2,214 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contacto - Portal Gaming</title>
-    <link rel="stylesheet" href="../styles/style_contacto.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-  <body class="index">
-    <header>
-      <h1 class="index-title">Fale connosco</h1>
-    </header>
-    <main>
-      <div class="card-botoes">
-        <form>
-          <label for="nome">Nome:</label><br />
-          <input type="text" id="nome" name="nome" required /><br /><br />
-
-          <label for="email">Email:</label><br />
-          <input type="email" id="email" name="email" required /><br /><br />
-
-          <label for="mensagem">Mensagem:</label><br />
-          <textarea id="mensagem" name="mensagem" rows="4" required></textarea
-          ><br /><br />
-
-          <button type="submit">Enviar</button>
-        </form>
+  <body class="bg-dark text-light d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header class="py-5 text-center">
+      <div class="container">
+        <div class="mb-2">
+          <span class="badge text-bg-info text-dark">Contacto</span>
+        </div>
+        <h1 class="display-6 fw-bold mb-1 text-info">Fale connosco</h1>
+        <p class="text-secondary mb-0">
+          Responderemos com brevidade. Campos assinalados são obrigatórios.
+        </p>
       </div>
-    </main>
-    <div class="voltar-container">
-      <a href="../index.html" class="botao-voltar">
-        <i class="fa-solid fa-arrow-left"></i> Voltar ao Início
+      <div class="mt-4">
+        <div style="height: 4px; background-color: #0dcaf0"></div>
+      </div>
+    </header>
+
+    <!-- Conteúdo -->
+    <main class="container py-5 flex-grow-1">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 col-xl-6">
+          <!-- Cartão do formulário -->
+          <div
+            class="card bg-light text-dark shadow rounded-4 border border-3 border-info"
+          >
+            <div class="card-body p-4">
+              <form>
+                <!-- Nome -->
+                <div class="mb-3">
+                  <label for="nome" class="form-label">Nome</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-transparent"
+                      ><i class="fa-solid fa-user text-info"></i
+                    ></span>
+                    <input
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      class="form-control"
+                      placeholder="O seu nome"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-transparent"
+                      ><i class="fa-solid fa-envelope text-info"></i
+                    ></span>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="nome@dominio.com"
+                      required
+                    />
+                  </div>
+                  <div class="form-text">
+                    Nunca partilharemos o seu email com terceiros.
+                  </div>
+                </div>
+
+                <!-- Assunto -->
+                <div class="mb-3">
+                  <label for="assunto" class="form-label">Assunto</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-transparent"
+                      ><i class="fa-solid fa-tag text-info"></i
+                    ></span>
+                    <input
+                      type="text"
+                      id="assunto"
+                      name="assunto"
+                      class="form-control"
+                      placeholder="Ex.: Parceria / Suporte / Dúvida"
+                    />
+                  </div>
+                </div>
+
+                <!-- Mensagem -->
+                <div class="mb-3">
+                  <label for="mensagem" class="form-label">Mensagem</label>
+                  <div class="input-group">
+                    <span
+                      class="input-group-text bg-transparent align-items-start"
+                      ><i class="fa-solid fa-comment-dots text-info"></i
+                    ></span>
+                    <textarea
+                      id="mensagem"
+                      name="mensagem"
+                      rows="4"
+                      class="form-control"
+                      placeholder="Escreva a sua mensagem..."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Consentimento -->
+                <div class="form-check mb-4">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="consent"
+                    required
+                  />
+                  <label class="form-check-label" for="consent">
+                    Autorizo o contacto de seguimento com base nas informações
+                    fornecidas.
+                  </label>
+                </div>
+
+                <!-- Ações -->
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+                  <a
+                    href="../index.html"
+                    class="btn btn-outline-info fw-semibold"
+                  >
+                    <i class="fa-solid fa-arrow-left me-2"></i> Voltar ao Início
+                  </a>
+                  <button
+                    type="submit"
+                    class="btn btn-info text-dark fw-semibold"
+                  >
+                    <i class="fa-solid fa-paper-plane me-2"></i> Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Contactos rápidos -->
+          <div class="text-center mt-4">
+            <div
+              class="d-inline-flex align-items-center gap-3 px-3 py-2 border rounded-3 border-info"
+            >
+              <span class="small text-secondary">Também pode contactar:</span>
+              <a
+                href="mailto:email@exemplo.com"
+                class="link-info text-decoration-none"
+                ><i class="fa-solid fa-envelope me-1"></i> email@exemplo.com</a
+              >
+              <span class="text-secondary">•</span>
+              <a
+                href="https://www.linkedin.com/in/diogo-bilreiro-623368243/"
+                target="_blank"
+                class="link-info text-decoration-none"
+                ><i class="fa-brands fa-linkedin me-1"></i> LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+      <a href="../index.html" class="btn btn-outline-info fw-semibold px-4">
+        <i class="fa-solid fa-arrow-left me-2"></i> Voltar ao Início
       </a>
     </div>
-    <footer>
-      &copy; 2025 <a href="#">Portal Gaming - Diogo Bilreiro</a>
 
-      <div class="social-icons">
-        <br /><a
-          href="https://www.instagram.com/_bilreiro_/"
-          target="_blank"
-          aria-label="Instagram"
+    </main>
+    <!-- Footer -->
+    <footer class="mt-auto">
+      <div style="height: 4px; background-color: #0dcaf0"></div>
+      <div class="container text-center py-4 small text-secondary">
+        &copy; 2025
+        <a href="#" class="link-info text-decoration-none"
+          >Portal Gaming - Diogo Bilreiro</a
         >
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/diogo-bilreiro-623368243/"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a
-          href="https://github.com/Bilreiro21"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <i class="fab fa-github"></i>
-        </a>
+        <div class="mt-3 fs-4">
+          <a
+            href="https://www.instagram.com/_bilreiro_/"
+            target="_blank"
+            aria-label="Instagram"
+            class="link-info me-3"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/diogo-bilreiro-623368243/"
+            target="_blank"
+            aria-label="LinkedIn"
+            class="link-info me-3"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/Bilreiro21"
+            target="_blank"
+            aria-label="GitHub"
+            class="link-info"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
       </div>
     </footer>
   </body>
