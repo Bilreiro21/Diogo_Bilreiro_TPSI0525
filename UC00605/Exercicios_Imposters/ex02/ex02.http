@@ -1,0 +1,38 @@
+POST http://localhost:2525/imposters
+Content-Type: application/json
+
+{
+  "port": 4542,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/cars",
+            "query": { "brand": "Toyota" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "brand": "Toyota",
+              "results": [{ "id": 1, "modelo": "Corolla", "preco": 20000 }]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+### Teste positivo
+GET http://localhost:4542/api/cars?brand=Toyota
+
+### Teste negativo (sem query)
+GET http://localhost:4542/api/cars

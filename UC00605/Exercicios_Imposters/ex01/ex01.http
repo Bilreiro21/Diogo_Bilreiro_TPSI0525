@@ -1,0 +1,25 @@
+POST http://localhost:2525/imposters
+Content-Type: application/json
+
+{
+  "port": 4541,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        { "equals": { "method": "GET", "path": "/api/marcas" } }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "marcas": ["Toyota", "Audi", "Ford", "Volvo", "Honda"] }
+          }
+        }
+      ]
+    }
+  ]
+}
+###
+GET http://localhost:4541/api/marcas

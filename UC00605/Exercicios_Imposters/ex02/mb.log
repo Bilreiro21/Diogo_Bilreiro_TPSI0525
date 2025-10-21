@@ -1,0 +1,15 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-21T15:45:26.799Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2025-10-21T15:45:29.565Z"}
+{"level":"info","message":"[http:4542] Open for business...","timestamp":"2025-10-21T15:45:29.569Z"}
+{"level":"info","message":"[http:4542] ::ffff:127.0.0.1:56489 => GET /api/cars?brand=Toyota","timestamp":"2025-10-21T15:45:33.186Z"}
+{"level":"info","message":"[http:4542] ::ffff:127.0.0.1:56490 => GET /api/cars","timestamp":"2025-10-21T15:45:38.490Z"}
+{"level":"info","message":"[http:4542] no predicate match, using default response","timestamp":"2025-10-21T15:45:38.490Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2025-10-21T15:45:54.113Z"}
+{"level":"info","message":"[http:4542] ::1:56577 => GET /api/cars?brand=Toyota","timestamp":"2025-10-21T15:45:58.556Z"}
+{"level":"info","message":"[http:4542] ::1:50629 => GET /favicon.ico","timestamp":"2025-10-21T15:45:58.620Z"}
+{"level":"info","message":"[http:4542] no predicate match, using default response","timestamp":"2025-10-21T15:45:58.620Z"}
+{"level":"info","message":"[http:4542] ::1:49398 => GET /api/cars","timestamp":"2025-10-21T15:46:01.635Z"}
+{"level":"info","message":"[http:4542] no predicate match, using default response","timestamp":"2025-10-21T15:46:01.635Z"}
+{"level":"info","message":"[http:4542] ::1:55313 => GET /favicon.ico","timestamp":"2025-10-21T15:46:01.693Z"}
+{"level":"info","message":"[http:4542] no predicate match, using default response","timestamp":"2025-10-21T15:46:01.693Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2025-10-21T15:46:07.449Z"}

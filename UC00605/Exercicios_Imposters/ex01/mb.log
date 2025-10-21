@@ -1,0 +1,11 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-21T15:40:21.576Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2025-10-21T15:40:28.478Z"}
+{"level":"info","message":"[http:4541] Open for business...","timestamp":"2025-10-21T15:40:28.484Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2025-10-21T15:40:33.296Z"}
+{"level":"info","message":"[http:4541] ::ffff:127.0.0.1:61570 => GET /api/marcas","timestamp":"2025-10-21T15:40:51.161Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2025-10-21T15:40:53.489Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2025-10-21T15:40:59.877Z"}
+{"level":"info","message":"[http:4541] ::1:53114 => GET /api/marcas","timestamp":"2025-10-21T15:41:32.907Z"}
+{"level":"info","message":"[http:4541] ::1:50060 => GET /favicon.ico","timestamp":"2025-10-21T15:41:32.976Z"}
+{"level":"info","message":"[http:4541] no predicate match, using default response","timestamp":"2025-10-21T15:41:32.977Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2025-10-21T15:41:43.059Z"}
