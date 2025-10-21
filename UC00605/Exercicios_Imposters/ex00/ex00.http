@@ -4,10 +4,10 @@ Content-Type: application/json
 {
   "port": 4540,
   "protocol": "http",
-  "name": "ex00_base",
+  "name": "ex00",
   "stubs": []
 }
 
 ###
-GET http://localhost:2525/imposters/4540
+GET http://localhost:2525/imposters
 
