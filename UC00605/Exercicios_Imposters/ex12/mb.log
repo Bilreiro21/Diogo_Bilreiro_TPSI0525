@@ -1,0 +1,5 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.2 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2025-10-21T16:43:57.721Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2025-10-21T16:43:59.339Z"}
+{"level":"info","message":"[http:4552] Open for business...","timestamp":"2025-10-21T16:43:59.344Z"}
+{"level":"info","message":"[http:4552] ::ffff:127.0.0.1:65529 => POST /api/auth","timestamp":"2025-10-21T16:44:02.117Z"}
+{"level":"info","message":"[mb:2525] Adios - see you soon?","timestamp":"2025-10-21T16:44:19.391Z"}

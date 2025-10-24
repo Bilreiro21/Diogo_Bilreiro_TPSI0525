@@ -1,0 +1,32 @@
+POST http://localhost:2525/imposters
+Content-Type: application/json
+
+{
+  "port": 4551,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        { "equals": { "method": "POST", "path": "/api/tasks", "headers": { "Content-Type": "application/json" } } }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": {
+              "Content-Type": "application/json",
+              "Location": "/api/tasks/9001"
+            },
+            "body": { "id": 9001, "status": "created" }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+###
+POST http://localhost:4551/api/tasks
+Content-Type: application/json
+
+{ "title":"nova tarefa" }
