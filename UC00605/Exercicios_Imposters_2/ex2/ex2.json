@@ -1,0 +1,169 @@
+{
+  "imposters": [
+    {
+      "port": 4545,
+      "protocol": "http",
+      "name": "API Gestao de Inventario",
+      "stubs": [
+
+        {
+          "comment": "REGRA (POST): Quantidade negativa -> 400",
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/produtos",
+                "body": {
+                  "nome": "Produto Inválido",
+                  "preco": 10,
+                  "quantidade": -5
+                }
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 400,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "erro": "Valor inválido" }
+              }
+            }
+          ]
+        },
+        {
+          "comment": "SUCESSO (POST): Adiciona novo produto",
+          "predicates": [
+            { "equals": { "method": "POST", "path": "/api/produtos" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 201,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "id": 103, "nome": "Novo Produto (Mock)", "preco": 50, "quantidade": 20 }
+              }
+            }
+          ]
+        },
+
+        {
+          "comment": "REGRA (PUT/stock): Produto inexistente -> 404",
+          "predicates": [
+            { "equals": { "method": "PUT", "path": "/api/produtos/999/stock" } }
+          ],
+          "responses": [
+            { "is": { "statusCode": 404 } }
+          ]
+        },
+        {
+          "comment": "SUCESSO (PUT/stock): Atualiza o stock",
+          "predicates": [
+            { "matches": { "method": "PUT", "path": "^/api/produtos/\\d+/stock$" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "id": 101, "nome": "Portátil ASUS", "preco": 1200, "quantidade": 15 }
+              }
+            }
+          ]
+        },
+
+        {
+          "comment": "REGRA (DELETE): Produto inexistente -> 404",
+          "predicates": [
+            { "equals": { "method": "DELETE", "path": "/api/produtos/999" } }
+          ],
+          "responses": [
+            { "is": { "statusCode": 404 } }
+          ]
+        },
+        {
+          "comment": "REGRA (DELETE): Stock NAO e zero -> 400",
+          "predicates": [
+            { "equals": { "method": "DELETE", "path": "/api/produtos/101" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 400,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "erro": "Não é possível remover. Stock não é zero." }
+              }
+            }
+          ]
+        },
+        {
+          "comment": "SUCESSO (DELETE): Stock e zero -> 204",
+          "predicates": [
+            { "equals": { "method": "DELETE", "path": "/api/produtos/102" } }
+          ],
+          "responses": [
+            { "is": { "statusCode": 204 } }
+          ]
+        },
+
+        {
+          "comment": "REGRA (GET): Produto inexistente -> 404",
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/produtos/999" } }
+          ],
+          "responses": [
+            { "is": { "statusCode": 404 } }
+          ]
+        },
+        {
+          "comment": "SUCESSO (GET): Produto 101 (Com Stock)",
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/produtos/101" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "id": 101, "nome": "Portátil ASUS", "preco": 1200, "quantidade": 10 }
+              }
+            }
+          ]
+        },
+        {
+          "comment": "SUCESSO (GET): Produto 102 (Stock Zero)",
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/produtos/102" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "id": 102, "nome": "Rato Descontinuado", "preco": 25, "quantidade": 0 }
+              }
+            }
+          ]
+        },
+        {
+          "comment": "SUCESSO (GET): Lista de produtos",
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/produtos" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": [
+                  { "id": 101, "nome": "Portátil ASUS", "preco": 1200, "quantidade": 10 },
+                  { "id": 102, "nome": "Rato Descontinuado", "preco": 25, "quantidade": 0 }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

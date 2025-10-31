@@ -1,0 +1,64 @@
+# Variáveis de Teste
+@host = http://localhost:4545
+
+@prodIdComStock = 101
+@prodIdStockZero = 102
+@prodIdInexistente = 999
+
+### SUCESSO: GET Lista de Produtos
+GET {{host}}/api/produtos
+
+### SUCESSO: GET Produto 101 (Com Stock)
+GET {{host}}/api/produtos/{{prodIdComStock}}
+
+### SUCESSO: GET Produto 102 (Stock Zero)
+GET {{host}}/api/produtos/{{prodIdStockZero}}
+
+### REGRA: GET Produto Inexistente
+GET {{host}}/api/produtos/{{prodIdInexistente}}
+
+### REGRA: POST com Quantidade Negativa
+POST {{host}}/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Produto Inválido",
+  "preco": 10,
+  "quantidade": -5
+}
+
+### SUCESSO: POST Válido
+POST {{host}}/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Teclado",
+  "preco": 80,
+  "quantidade": 50
+}
+
+### REGRA: PUT em Produto Inexistente
+PUT {{host}}/api/produtos/{{prodIdInexistente}}/stock
+Content-Type: application/json
+
+{
+  "quantidade": 5
+}
+
+### SUCESSO: PUT em Produto Válido
+PUT {{host}}/api/produtos/{{prodIdComStock}}/stock
+Content-Type: application/json
+
+{
+  "quantidade": 5
+}
+
+
+### REGRA: DELETE em Produto Inexistente
+DELETE {{host}}/api/produtos/{{prodIdInexistente}}
+
+### REGRA: DELETE em Produto Com Stock (ID 101)
+DELETE {{host}}/api/produtos/{{prodIdComStock}}
+
+### SUCESSO: DELETE em Produto com Stock Zero (ID 102)
+DELETE {{host}}/api/produtos/{{prodIdStockZero}}
