@@ -28,3 +28,12 @@ POST http://localhost:4549/api/temperature
 Content-Type: application/json
 
 { "sensor_id": "s1", "value": 25.6 }
+
+### Teste com valor não numérico
+POST http://localhost:4561/api/temperature
+Content-Type: application/json
+
+{
+    "sensor_id": "s1",
+    "value": "teste" 
+}
