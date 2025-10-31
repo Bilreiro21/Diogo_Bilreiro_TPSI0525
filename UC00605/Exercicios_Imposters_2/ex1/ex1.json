@@ -1,0 +1,174 @@
+{
+  "imposters": [
+    {
+      "port": 4545,
+      "protocol": "http",
+      "name": "API Gestao de Alunos",
+      "stubs": [
+
+        {
+          "comment": "REGRA (POST): Idade inferior a 10 -> 400",
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/alunos",
+                "body": {
+                  "nome": "Criança Teste",
+                  "idade": 9,
+                  "curso": "Engenharia"
+                }
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 400,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "erro": "Idade mínima não atingida" }
+              }
+            }
+          ]
+        },
+        {
+          "comment": "REGRA (POST): Curso inexistente -> 404",
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/alunos",
+                "body": {
+                  "nome": "Aluno Místico",
+                  "idade": 30,
+                  "curso": "Curso Fantasma"
+                }
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 404,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "erro": "Curso não encontrado" }
+              }
+            }
+          ]
+        },
+        {
+          "comment": "SUCESSO (POST): Adiciona um novo aluno",
+          "predicates": [
+            { "equals": { "method": "POST", "path": "/api/alunos" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 201,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "id": 3, "nome": "Novo Aluno", "idade": 20, "curso": "Economia" }
+              }
+            }
+          ]
+        },
+
+        {
+          "comment": "REGRA (PUT): Aluno inexistente -> 404",
+          "predicates": [
+            { "equals": { "method": "PUT", "path": "/api/alunos/999" } }
+          ],
+          "responses": [
+            { "is": { "statusCode": 404 } }
+          ]
+        },
+        {
+          "comment": "SUCESSO (PUT): Atualiza um aluno",
+          "predicates": [
+            { "matches": { "method": "PUT", "path": "^/api/alunos/\\d+$" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "id": 1, "nome": "Ana Silva (Atualizada)", "idade": 23, "curso": "Engenharia Informática" }
+              }
+            }
+          ]
+        },
+
+        {
+          "comment": "REGRA (DELETE): Sem permissão de Admin -> 403",
+          "predicates": [
+            { "matches": { "method": "DELETE", "path": "^/api/alunos/\\d+$" } },
+            {
+              "not": {
+                "equals": { "headers": { "Authorization": "Bearer token_de_admin" } }
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 403,
+                "body": { "erro": "Permissão de administração necessária" }
+              }
+            }
+          ]
+        },
+        {
+          "comment": "SUCESSO (DELETE): Remove um aluno (COM Admin)",
+          "predicates": [
+            { "matches": { "method": "DELETE", "path": "^/api/alunos/\\d+$" } }
+          ],
+          "responses": [
+            { "is": { "statusCode": 204 } }
+          ]
+        },
+
+        {
+          "comment": "REGRA (GET): Aluno inexistente -> 404",
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/alunos/999" } }
+          ],
+          "responses": [
+            { "is": { "statusCode": 404 } }
+          ]
+        },
+        {
+          "comment": "SUCESSO (GET): Mostra um aluno especifico",
+          "predicates": [
+            { "matches": { "method": "GET", "path": "^/api/alunos/\\d+$" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "id": 1, "nome": "Ana Silva", "idade": 22, "curso": "Engenharia Informática" }
+              }
+            }
+          ]
+        },
+        {
+          "comment": "SUCESSO (GET): Lista todos os alunos",
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/alunos" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": [
+                  { "id": 1, "nome": "Ana Silva", "idade": 22, "curso": "Engenharia Informática" },
+                  { "id": 2, "nome": "Bruno Costa", "idade": 21, "curso": "Gestão" }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

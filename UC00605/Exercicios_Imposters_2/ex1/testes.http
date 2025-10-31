@@ -1,0 +1,70 @@
+# Variáveis de Teste
+@host = http://localhost:4545
+@alunoIdValido = 1
+@alunoIdInexistente = 999
+
+@adminToken = "Bearer token_de_admin"
+@userToken = "Bearer token_normal"
+
+### REGRA: POST com Idade < 10
+POST {{host}}/api/alunos
+Content-Type: application/json
+
+{
+  "nome": "Criança Teste",
+  "idade": 9,
+  "curso": "Engenharia"
+}
+
+### REGRA: POST com Curso Inexistente
+POST {{host}}/api/alunos
+Content-Type: application/json
+
+{
+  "nome": "Aluno Místico",
+  "idade": 30,
+  "curso": "Curso Fantasma"
+}
+
+### SUCESSO: POST Válido
+POST {{host}}/api/alunos
+Content-Type: application/json
+
+{
+  "nome": "Aluno Válido",
+  "idade": 25,
+  "curso": "Gestão"
+}
+
+### REGRA: PUT em Aluno Inexistente
+PUT {{host}}/api/alunos/{{alunoIdInexistente}}
+Content-Type: application/json
+
+{
+  "nome": "Fantasma",
+  "idade": 30
+}
+
+### SUCESSO: PUT Válido
+PUT {{host}}/api/alunos/{{alunoIdValido}}
+Content-Type: application/json
+
+{
+  "nome": "Ana Silva Atualizada",
+  "idade": 23
+}
+
+### REGRA: DELETE sem Token de Admin
+DELETE {{host}}/api/alunos/{{alunoIdValido}}
+Authorization: {{userToken}}
+
+### SUCESSO: DELETE com Token de Admin
+DELETE {{host}}/api/alunos/{{alunoIdValido}}
+Authorization: {{adminToken}}
+
+
+### REGRA: GET de Aluno Inexistente
+GET {{host}}/api/alunos/{{alunoIdInexistente}}
+
+### SUCESSO: GET de Aluno Válido
+GET {{host}}/api/alunos/{{alunoIdValido}}
